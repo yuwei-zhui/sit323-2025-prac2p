@@ -1,0 +1,23 @@
+{
+  "name": "sit323-2025-prac2p",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuwei-zhui/sit323-2025-prac2p.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuwei-zhui/sit323-2025-prac2p/issues"
+  },
+  "homepage": "https://github.com/yuwei-zhui/sit323-2025-prac2p#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
