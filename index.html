@@ -1,55 +1,158 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+        :root {
+            --red: #FF6B6B;
+            --blue: #4ECDC4;
+            --yellow: #FFE66D;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #e9c7ff91;
             margin: 0;
-            padding: 0;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            background: linear-gradient(135deg, var(--red), var(--blue));
+            font-family: 'Poppins', sans-serif;
+            color: #2d3436;
         }
 
         .box {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            width: 85%;
+            max-width: 700px;
+            transform-style: preserve-3d;
+        }
+
+        .profile {
             text-align: center;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            width: 450px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            margin-bottom: 2rem;
+        }
+
+        .info-box-border {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid var(--yellow);
+            box-shadow: 0 4px 15px rgba(255, 230, 109, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .info-box-border:hover {
+            transform: rotate(8deg) scale(1.05);
         }
 
         h1 {
-            color: #333;
-            font-size: 24px;
-            margin-bottom: 10px;
+            color: var(--red);
+            margin: 1rem 0 0.5rem;
+            font-size: 2.2em;
         }
 
-        .button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 10px 20px;
-            font-size: 16px;
+        .subtitle {
+            color: var(--blue);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .info-box {
+            background: white;
+            padding: 1.2rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .info-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.15);
+            border-color: var(--yellow);
+        }
+
+        .icon {
+            font-size: 1.8rem;
+            color: var(--blue);
+            margin-bottom: 0.8rem;
+        }
+
+        .github-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.8rem 1.8rem;
+            background: linear-gradient(45deg, var(--red), var(--blue));
+            color: white !important;
             text-decoration: none;
-            color: white;
-            background-color: #ffcc3e;
-            border-radius: 5px;
-            transition: 0.3s;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            margin-top: 1.5rem;
         }
 
-        .button:hover {
-            background-color: #ffcc3e;
+        .github-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        @media (max-width: 600px) {
+            .box {
+                padding: 1.5rem;
+                width: 90%;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="box">
-        <h2>Welcome to yuwei's Website</h2>
-        <a href="https://github.com/yuwei-zhui/sit323-2025-prac2p" class="button">Visit GitHub Repo</a>
+        <div class="profile">
+            <h1>Welcome to yuwei's Website</h1>
+            <p>Tips - you can also call me Elaine😊</p>
+            <p class="subtitle">Back-end Developer | Full-stack Development</p>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-box">
+                <i class="fas fa-code icon"></i>
+                <h3>Tech Stack</h3>
+                <p>Java/Spring Boot<br>MySQL/Redis<br>HTML/CSS<br>Javascript/Nodejs<br>(👆still learning)</p>
+            </div>
+
+            <div class="info-box">
+                <i class="fas fa-user-astronaut icon"></i>
+                <h3>Personality</h3>
+                <p>MBTI - ENFJ🎓<br>Perfectionist<br>Creative & Sensitive<br>Problem Solver</p>
+            </div>
+
+            <div class="info-box">
+                <i class="fas fa-heart icon"></i>
+                <h3>Passions</h3>
+                <p>Vintage Fashion<br>Film Making🎦<br>Baking & Cooking</p>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="https://github.com/yuwei-zhui" class="github-btn" target="_blank">
+                <i class="fab fa-github"></i>
+                <span style="margin-left: 10px;">Explore My GitHub Repo</span>
+            </a>
+        </div>
     </div>
 </body>
 </html>
